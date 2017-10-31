@@ -1,0 +1,53 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <script type="text/javascript">
+       function print_star(n) {
+         var result = '';
+         for(var i=0; i<n; i++)	{
+	 	for(var j=0; j<n-1-i; j++) {
+			result += ' ';
+		}
+		for(var k=0; k<i+1; k++) {
+			result += '*';
+		}
+		result += '\n';
+	 }
+          return result;
+       }
+
+       // *
+       exepect(print_star(1), '*\n');
+       //  *
+       // **
+       exepect(print_star(2), ' *\n**\n');
+
+       //   *
+       //  **
+       // ***
+       exepect(print_star(3), '  *\n **\n***\n');
+
+       //    *
+       //   **
+       //  ***
+       // ****
+       exepect(print_star(4), '   *\n  **\n ***\n****\n');
+
+       //     *
+       //    **
+       //   ***
+       //  ****
+       // *****       
+       exepect(print_star(5), '    *\n   **\n  ***\n ****\n*****\n');
+
+       function exepect(l, r) {
+         if (l === r)
+          console.log('pass');
+         else
+          console.log('fail');
+       }
+    </script>
+</head>
+<body>
+</body>
+</html>
